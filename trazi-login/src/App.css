@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+/* Smooth floating + rotation + scaling */
+@keyframes super-float {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  25% {
+    transform: translate(15px, -10px) scale(1.05) rotate(5deg);
+  }
+  50% {
+    transform: translate(-10px, 15px) scale(0.95) rotate(-5deg);
+  }
+  75% {
+    transform: translate(10px, 10px) scale(1.08) rotate(3deg);
+  }
+  100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+}
+
+/* Variants with different speeds */
+.circle-animation-1 {
+  animation: super-float 8s ease-in-out infinite;
+}
+.circle-animation-2 {
+  animation: super-float 12s ease-in-out infinite reverse;
+}
+.circle-animation-3 {
+  animation: super-float 10s ease-in-out infinite;
+}
+.circle-animation-4 {
+  animation: super-float 14s ease-in-out infinite reverse;
+}
+
+/* For bubbles (faster, lighter float) */
+@keyframes bubble-float {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+}
+
+.animate-bubble-1 {
+  animation: bubble-float 6s ease-in-out infinite;
+}
+.animate-bubble-2 {
+  animation: bubble-float 8s ease-in-out infinite reverse;
+}
+.animate-bubble-3 {
+  animation: bubble-float 10s ease-in-out infinite;
+}
